@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: api
-        image: asad2200/k8s-assignment-1:v1
+        image: asad2200/k8s-assignment-1:amd64
         ports:
         - containerPort: 60000
         resources:
