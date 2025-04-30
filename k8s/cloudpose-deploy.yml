@@ -4,7 +4,7 @@ metadata:
   name: cloudpose-deployment
   labels:
     app: cloudpose
-  namespace: k8s-assignment-ns
+  namespace: k8s-a-ns
 spec:
   replicas: 1
   selector:
@@ -27,9 +27,3 @@ spec:
           limits:
             cpu: "0.5"
             memory: "512Mi"
-        readinessProbe:                 # optional but helps load-balancing
-          httpGet:
-            path: /docs
-            port: 60000
-          initialDelaySeconds: 3
-          periodSeconds: 5
