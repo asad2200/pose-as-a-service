@@ -105,7 +105,7 @@ if __name__ == "__main__":
     import uvicorn
     
     # Choose a port between 60000-61000
-    PORT = int(os.getenv("PORT", "60500"))
+    PORT = int(os.getenv("PORT", "60000"))
     
     # Run the FastAPI application
     uvicorn.run("app.main:app", host="0.0.0.0", port=PORT, reload=False)

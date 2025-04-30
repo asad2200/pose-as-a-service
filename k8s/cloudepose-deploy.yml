@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cloudpose-deployment
+  labels:
+    app: cloudpose
+  namespace: k8s-assignment-ns
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cloudpose
+  template:
+    metadata:
+      labels:
+        app: cloudpose
+    spec:
+      containers:
+      - name: api
+        image: asad2200/k8s-assignment-1:v1
+        ports:
+        - containerPort: 60000
+        resources:
+          requests:
+            cpu: "0.5"
+            memory: "512Mi"
+          limits:
+            cpu: "0.5"
+            memory: "512Mi"
+        readinessProbe:                 # optional but helps load-balancing
+          httpGet:
+            path: /docs
+            port: 60000
+          initialDelaySeconds: 3
+          periodSeconds: 5
