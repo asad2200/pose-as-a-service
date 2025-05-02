@@ -1,0 +1,3 @@
+fastapi[standard]>=0.109.0
+tensorflow==2.15.0
+opencv-python>=4.9.0
