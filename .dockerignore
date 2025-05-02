@@ -3,3 +3,8 @@
 
 src/
 __pycache__/
+experiments/
+k8s/
+.gitignore
+.git/
+README.md
