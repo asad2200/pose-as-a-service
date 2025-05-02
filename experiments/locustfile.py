@@ -102,4 +102,5 @@ def on_any_request(request_type, name, response_time, response_length,
 #   --headless \
 #   --users 2000 \
 #   --spawn-rate 1 \
+#   --only-summary \
 #   --host http://localhost:30000

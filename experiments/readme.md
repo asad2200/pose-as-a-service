@@ -12,4 +12,4 @@ python cloudpose_client.py  <input folder name> <URL> <num_threads>
 
 ## Sample run command
 
-python client/cloudpose_client.py  client/inputfolder/ <URL> 4
+python experiments/cloudpose_client.py  experiments/inputfolder/ http://207.211.146.117:30000/pose/json 4

@@ -24,16 +24,7 @@ def call_cloudpose_service(image):
         data ['id'] = str(img_id)
         headers = {'Content-Type': 'application/json'}
 
-        # ---- save data to a file
-        # output_dir = "output"
-        # if not os.path.exists(output_dir):
-        #     os.makedirs(output_dir)
-            
-        # output_file = os.path.join(output_dir, f"{img_id}.json")
-        # with open(output_file, 'w') as f:
-        #     f.write(url)
-
-        response = requests.post(url, data= json.dumps(data), headers = headers)
+        response = requests.post(url, json=data, headers = headers)
 
         if response.ok:
             output = "Thread : {},  input image: {},  output:{}".format(threading.current_thread().getName(),
