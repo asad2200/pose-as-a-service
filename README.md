@@ -1,4 +1,4 @@
-# CloudPose
+# pose-as-a-service
 
 CloudPose is a high-performance, containerized pose estimation service built with FastAPI, TensorFlow Lite, and OpenCV. It exposes RESTful endpoints for JSON‐based and image‐based inference, supports load testing via Locust, and can be deployed locally, in Docker, or on Kubernetes.
 
